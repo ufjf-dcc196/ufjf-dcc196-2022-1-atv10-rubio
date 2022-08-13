@@ -5,7 +5,9 @@
       <map>
         <entry key="app/src/main/res/layout/activity_cadastrar_produto.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_editar_produto.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_listar_produtos.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/produto_layout.xml" value="0.33" />
       </map>
     </option>
   </component>
