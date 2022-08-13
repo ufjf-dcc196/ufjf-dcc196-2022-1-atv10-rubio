@@ -2,9 +2,10 @@ package br.ufjf.dcc196.matheusrubio.atv10;
 
 import android.content.Context;
 
+import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-
+@Database(entities = {Produto.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
     public static final String DB_NAME = "produto-db";
     private static AppDatabase INSTANCE;
@@ -17,7 +18,7 @@ public abstract class AppDatabase extends RoomDatabase {
                     context.getApplicationContext(),
                     AppDatabase.class,
                     DB_NAME
-            ).build();
+            ).allowMainThreadQueries().build();
         }
         return INSTANCE;
     }

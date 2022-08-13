@@ -25,21 +25,23 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="149dp"
         android:text="Produtos cadastrados: "
         android:textAppearance="@android:style/Theme.Black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="149dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonToListarProdutos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:onClick="toListarProdutosActivity"
         android:text="Produtos cadastrados"
         app:backgroundTint="@android:color/holo_red_dark"
-        app:layout_constraintEnd_toEndOf="@+id/textViewProdutosCadastrados"
+        app:layout_constraintEnd_toStartOf="@+id/textViewProdutosCadastrados"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -48,8 +50,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:layout_marginBottom="398dp"
+        android:onClick="toCadastrarProdutoActivity"
         android:text="Cadastrar produto"
         app:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonToListarProdutos"
         app:layout_constraintStart_toStartOf="@+id/buttonToListarProdutos"
         app:layout_constraintTop_toBottomOf="@+id/buttonToListarProdutos" />
