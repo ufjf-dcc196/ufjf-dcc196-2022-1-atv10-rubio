@@ -33,7 +33,7 @@
         tools:layout_editor_absoluteY="149dp" />
 
     <Button
-        android:id="@+id/buttonListarProdutos"
+        android:id="@+id/buttonToListarProdutos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -44,14 +44,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/buttonCadastrarProduto"
+        android:id="@+id/buttonToCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Cadastrar produto"
         app:backgroundTint="@android:color/holo_red_dark"
-        app:layout_constraintEnd_toEndOf="@+id/buttonListarProdutos"
-        app:layout_constraintStart_toStartOf="@+id/buttonListarProdutos"
-        app:layout_constraintTop_toBottomOf="@+id/buttonListarProdutos" />
+        app:layout_constraintEnd_toEndOf="@+id/buttonToListarProdutos"
+        app:layout_constraintStart_toStartOf="@+id/buttonToListarProdutos"
+        app:layout_constraintTop_toBottomOf="@+id/buttonToListarProdutos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
