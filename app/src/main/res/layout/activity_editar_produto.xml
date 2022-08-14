@@ -33,7 +33,7 @@
         android:hint="Digite o valor do produto..."
         android:inputType="textPersonName"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEditarProduto"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSalvarEdicao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/labelNomeProduto" />
 
     <Button
-        android:id="@+id/buttonEditarProduto"
+        android:id="@+id/buttonSalvarEdicao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -123,12 +123,12 @@
         android:id="@+id/buttonVoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="204dp"
+        android:layout_marginBottom="208dp"
         android:text="Voltar"
         app:backgroundTint="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/buttonEditarProduto"
-        app:layout_constraintStart_toStartOf="@+id/buttonEditarProduto"
-        app:layout_constraintTop_toBottomOf="@+id/buttonEditarProduto" />
+        app:layout_constraintEnd_toEndOf="@+id/buttonSalvarEdicao"
+        app:layout_constraintStart_toStartOf="@+id/buttonSalvarEdicao"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSalvarEdicao" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8sp">
+    android:padding="8sp"
+    tools:context=".ListarProdutosActivity">
 
     <TextView
         android:id="@+id/textViewNome"
@@ -19,37 +20,37 @@
         android:text="textViewNome"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintEnd_toStartOf="@+id/buttonVisualizarProduto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/buttonExcluirProduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonEditarProduto"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="@+id/buttonEditarProduto"
         app:srcCompat="@android:drawable/ic_delete" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/buttonEditarProduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton3"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonVisualizarProduto"
+        app:layout_constraintEnd_toStartOf="@+id/buttonExcluirProduto"
+        app:layout_constraintTop_toTopOf="@+id/buttonVisualizarProduto"
         app:layout_constraintVertical_bias="0.526"
         app:srcCompat="@android:drawable/ic_menu_edit" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/buttonVisualizarProduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/textViewNome"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEditarProduto"
         app:layout_constraintTop_toTopOf="@+id/textViewNome"
         app:srcCompat="@android:drawable/ic_menu_view" />
 
