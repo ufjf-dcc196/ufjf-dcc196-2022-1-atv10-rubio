@@ -1,4 +1,4 @@
-package br.ufjf.dcc196.matheusrubio.atv10;
+package br.ufjf.dcc196.matheusrubio.atv10.Model;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -8,6 +8,8 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import java.util.List;
+
+import br.ufjf.dcc196.matheusrubio.atv10.Model.Produto;
 
 @Dao
 public interface ProdutoDao {

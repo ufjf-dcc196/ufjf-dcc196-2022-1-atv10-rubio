@@ -1,4 +1,4 @@
-package br.ufjf.dcc196.matheusrubio.atv10;
+package br.ufjf.dcc196.matheusrubio.atv10.Model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

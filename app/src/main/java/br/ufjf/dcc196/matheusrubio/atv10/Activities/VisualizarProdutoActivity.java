@@ -1,4 +1,4 @@
-package br.ufjf.dcc196.matheusrubio.atv10;
+package br.ufjf.dcc196.matheusrubio.atv10.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import java.util.List;
+import br.ufjf.dcc196.matheusrubio.atv10.Activities.EditarProdutoActivity;
+import br.ufjf.dcc196.matheusrubio.atv10.Model.AppDatabase;
+import br.ufjf.dcc196.matheusrubio.atv10.Model.Produto;
+import br.ufjf.dcc196.matheusrubio.atv10.R;
 
 public class VisualizarProdutoActivity extends AppCompatActivity {
     private TextView textViewNomeProduto;

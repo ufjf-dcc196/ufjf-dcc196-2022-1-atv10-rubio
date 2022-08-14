@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="8sp"
-    tools:context=".ListarProdutosActivity">
+    tools:context=".Activities.ListarProdutosActivity">
 
     <TextView
         android:id="@+id/textViewNome"

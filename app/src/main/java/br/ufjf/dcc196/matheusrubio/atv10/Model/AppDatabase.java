@@ -1,10 +1,11 @@
-package br.ufjf.dcc196.matheusrubio.atv10;
+package br.ufjf.dcc196.matheusrubio.atv10.Model;
 
 import android.content.Context;
 
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+
 @Database(entities = {Produto.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
     public static final String DB_NAME = "produto-db";

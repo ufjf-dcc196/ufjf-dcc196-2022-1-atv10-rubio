@@ -1,4 +1,4 @@
-package br.ufjf.dcc196.matheusrubio.atv10;
+package br.ufjf.dcc196.matheusrubio.atv10.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,8 +7,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import br.ufjf.dcc196.matheusrubio.atv10.Model.AppDatabase;
+import br.ufjf.dcc196.matheusrubio.atv10.Model.Produto;
+import br.ufjf.dcc196.matheusrubio.atv10.Adapter.ProdutoAdapter;
+import br.ufjf.dcc196.matheusrubio.atv10.R;
 
 public class ListarProdutosActivity extends AppCompatActivity {
     private RecyclerView recyclerProdutos;

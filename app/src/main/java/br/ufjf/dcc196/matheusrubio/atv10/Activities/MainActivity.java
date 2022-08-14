@@ -1,15 +1,17 @@
-package br.ufjf.dcc196.matheusrubio.atv10;
+package br.ufjf.dcc196.matheusrubio.atv10.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import br.ufjf.dcc196.matheusrubio.atv10.Activities.CadastrarProdutoActivity;
+import br.ufjf.dcc196.matheusrubio.atv10.Activities.ListarProdutosActivity;
+import br.ufjf.dcc196.matheusrubio.atv10.Model.AppDatabase;
+import br.ufjf.dcc196.matheusrubio.atv10.R;
 
 public class MainActivity extends AppCompatActivity {
     private AppDatabase db;

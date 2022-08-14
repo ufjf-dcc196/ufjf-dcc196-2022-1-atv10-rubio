@@ -1,23 +1,27 @@
-package br.ufjf.dcc196.matheusrubio.atv10;
+package br.ufjf.dcc196.matheusrubio.atv10.Adapter;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+
+import br.ufjf.dcc196.matheusrubio.atv10.Activities.EditarProdutoActivity;
+import br.ufjf.dcc196.matheusrubio.atv10.Activities.VisualizarProdutoActivity;
+import br.ufjf.dcc196.matheusrubio.atv10.Model.AppDatabase;
+import br.ufjf.dcc196.matheusrubio.atv10.Model.Produto;
+import br.ufjf.dcc196.matheusrubio.atv10.R;
 
 public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder> {
     private List<Produto> produtos;
@@ -52,6 +56,12 @@ public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoAdapter.ProdutoV
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 db.produtoDao().delete(produtoSelecionado);
+                                Integer qtdProdutosRestantes = db.produtoDao().findAll().size();
+                                if (qtdProdutosRestantes <= 0) {
+                                    Toast toast = Toast.makeText(contexto, "Não existem produtos cadastrados no sistema...", Toast.LENGTH_SHORT);
+                                    toast.show();
+                                    activity.finish();
+                                }
                                 activity.recreate();
                                 dialog.dismiss();
                             }
