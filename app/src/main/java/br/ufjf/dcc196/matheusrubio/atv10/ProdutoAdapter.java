@@ -1,6 +1,9 @@
 package br.ufjf.dcc196.matheusrubio.atv10;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +27,9 @@ public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoAdapter.ProdutoV
     @Override
     public ProdutoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context contexto = parent.getContext();
+        Activity activity = (Activity) contexto;
         LayoutInflater inflater = LayoutInflater.from(contexto);
+        AppDatabase db = AppDatabase.getInstance(contexto);
         View avistamentoView = inflater.inflate(R.layout.produto_layout, parent, false);
         ProdutoViewHolder holder = new ProdutoViewHolder(avistamentoView, new ClickListener() {
             @Override
@@ -34,7 +39,25 @@ public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoAdapter.ProdutoV
 
             @Override
             public void onClickButtonExcluir(int position) {
-                Log.v("TESTE EXCLUIR", produtos.get(position).getNome());
+                Produto produtoSelecionado = produtos.get(position);
+                AlertDialog alertDialog = new AlertDialog.Builder(contexto).create();
+                alertDialog.setTitle("Você realmente deseja exluir o produto: " + produtoSelecionado.getNome() + "?");
+                alertDialog.setMessage("Essa ação será permanente!");
+                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Sim",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                db.produtoDao().delete(produtoSelecionado);
+                                activity.recreate();
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Não",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
             }
 
             @Override
