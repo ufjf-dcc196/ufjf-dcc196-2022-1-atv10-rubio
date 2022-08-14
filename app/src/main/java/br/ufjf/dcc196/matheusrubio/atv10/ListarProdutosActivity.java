@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,4 +37,6 @@ public class ListarProdutosActivity extends AppCompatActivity {
         avistamentoAdapter = new ProdutoAdapter(produtos);
         recyclerProdutos.setAdapter(avistamentoAdapter);
     }
+
+    public void voltar(View view) { finish(); }
 }

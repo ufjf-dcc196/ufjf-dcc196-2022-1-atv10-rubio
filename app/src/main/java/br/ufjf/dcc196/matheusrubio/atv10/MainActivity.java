@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -34,8 +35,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toListarProdutosActivity (View view) {
-        Intent novoAvistamentoActivity = new Intent(this, ListarProdutosActivity.class);
-        startActivity(novoAvistamentoActivity);
+        if (qtdProdutosCadastrados > 0) {
+            Intent novoAvistamentoActivity = new Intent(this, ListarProdutosActivity.class);
+            startActivity(novoAvistamentoActivity);
+            return;
+        }
+        Toast toast = Toast.makeText(this, "Não existem produtos cadastrados no sistema...", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public void toCadastrarProdutoActivity (View view) {

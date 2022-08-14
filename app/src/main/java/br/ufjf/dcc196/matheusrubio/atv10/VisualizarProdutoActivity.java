@@ -43,7 +43,7 @@ public class VisualizarProdutoActivity extends AppCompatActivity {
         produtoSelecionado = db.produtoDao().findById(idProdutoSelecionado);
         textViewNomeProduto.setText(produtoSelecionado.getNome());
         textViewQuantidadeProduto.setText(produtoSelecionado.getQuantidade().toString());
-        textViewPreçoProduto.setText(produtoSelecionado.getPreço().toString());
+        textViewPreçoProduto.setText("R$" + produtoSelecionado.getPreço().toString());
     }
 
     public void toEditarProduto(View view) {
