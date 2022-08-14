@@ -28,4 +28,12 @@ public class ListarProdutosActivity extends AppCompatActivity {
         avistamentoAdapter = new ProdutoAdapter(produtos);
         recyclerProdutos.setAdapter(avistamentoAdapter);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        List<Produto> produtos = db.produtoDao().findAll();
+        avistamentoAdapter = new ProdutoAdapter(produtos);
+        recyclerProdutos.setAdapter(avistamentoAdapter);
+    }
 }

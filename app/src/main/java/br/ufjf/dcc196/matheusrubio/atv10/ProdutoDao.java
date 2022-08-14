@@ -3,6 +3,7 @@ package br.ufjf.dcc196.matheusrubio.atv10;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -13,7 +14,7 @@ public interface ProdutoDao {
     @Insert
     void insertProduto(Produto novoProduto);
 
-    @Update
+    @Update(onConflict = OnConflictStrategy.REPLACE)
     void update(Produto produto);
 
     @Delete

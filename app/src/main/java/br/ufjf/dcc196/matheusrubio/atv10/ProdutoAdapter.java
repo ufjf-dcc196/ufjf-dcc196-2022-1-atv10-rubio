@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +36,10 @@ public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoAdapter.ProdutoV
         ProdutoViewHolder holder = new ProdutoViewHolder(avistamentoView, new ClickListener() {
             @Override
             public void onClickButtonEditar(int position) {
-                Log.v("TESTE EDITAR", produtos.get(position).getNome());
+                Produto produtoSelecionado = produtos.get(position);
+                Intent editarProdutoActivity = new Intent(contexto, EditarProdutoActivity.class);
+                editarProdutoActivity.putExtra("ID_PRODUTO", produtoSelecionado.getId());
+                contexto.startActivity(editarProdutoActivity);
             }
 
             @Override
