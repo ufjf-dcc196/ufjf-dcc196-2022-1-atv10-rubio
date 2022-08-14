@@ -67,7 +67,10 @@ public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoAdapter.ProdutoV
 
             @Override
             public void onClickButtonVisualizar(int position) {
-                Log.v("TESTE VISUALIZAR", produtos.get(position).getNome());
+                Produto produtoSelecionado = produtos.get(position);
+                Intent visualizarProdutoActivity = new Intent(contexto, VisualizarProdutoActivity.class);
+                visualizarProdutoActivity.putExtra("ID_PRODUTO", produtoSelecionado.getId());
+                contexto.startActivity(visualizarProdutoActivity);
             }
         });
         return holder;

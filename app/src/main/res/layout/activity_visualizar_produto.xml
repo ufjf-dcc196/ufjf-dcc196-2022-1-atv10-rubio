@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VisualizarProdutoActivity">
+
+    <TextView
+        android:id="@+id/labelPreço"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Preço:"
+        android:textAppearance="@android:style/Theme.Black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/labelQuantidade"
+        app:layout_constraintTop_toBottomOf="@+id/labelQuantidade" />
+
+    <TextView
+        android:id="@+id/textViewPreçoProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:textAppearance="@android:style/Theme.Black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/labelPreço"
+        app:layout_constraintStart_toEndOf="@+id/labelPreço"
+        app:layout_constraintTop_toTopOf="@+id/labelPreço"
+        tools:text="Preço do Produto" />
+
+    <TextView
+        android:id="@+id/labelQuantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Quantidade:"
+        android:textAppearance="@android:style/Theme.Black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/labelNomeProduto"
+        app:layout_constraintTop_toBottomOf="@+id/labelNomeProduto" />
+
+    <TextView
+        android:id="@+id/textViewQuantidadeProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:textAppearance="@android:style/Theme.Black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/labelQuantidade"
+        app:layout_constraintStart_toEndOf="@+id/labelQuantidade"
+        app:layout_constraintTop_toTopOf="@+id/labelQuantidade"
+        tools:text="Quantidade disponível" />
+
+    <TextView
+        android:id="@+id/labelNomeProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="Nome:"
+        android:textAppearance="@android:style/Theme.Black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNomeProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:textAppearance="@android:style/Theme.Black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/labelNomeProduto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/labelNomeProduto"
+        app:layout_constraintTop_toTopOf="@+id/labelNomeProduto"
+        tools:text="Nome Do Produto" />
+
+    <Button
+        android:id="@+id/buttonCadastrarProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="toEditarProduto"
+        android:text="Editar Produto"
+        app:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelPreço" />
+
+    <Button
+        android:id="@+id/buttonVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="voltar"
+        android:text="Voltar"
+        app:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCadastrarProduto"
+        app:layout_constraintStart_toStartOf="@+id/buttonCadastrarProduto"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCadastrarProduto" />
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="89dp"
+        android:layout_height="39dp"
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="86dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
